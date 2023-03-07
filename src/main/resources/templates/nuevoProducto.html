@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="../css/misprimerosestilos.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1>Ingresar productos</h1>
+
+	<div class="table table-dark table-striped">
+		<form th:action="@{/productos/insertar}" th:object="${producto}" th:method="GET">
+		<table>
+			<tr>
+				<td>
+					<label>Nombre:</label>
+				</td>
+				<td>
+					<input type="text" id="nombre" th:field="${producto.origen}">
+				</td>
+			</tr>
+
+
+
+			<tr>
+				<td>
+					<label>Codigo de Barras:</label>
+				</td>
+				<td>
+					<input type="text" id="codigoBarras" th:field="${producto.destino}">
+				</td>
+
+			</tr>
+
+
+
+			<tr>
+				<td>
+					<label>Categoria:</label>
+				</td>
+				<td>
+					<input type="text" id="categoria" th:field="${producto.fecha}">
+				</td>
+
+			</tr>
+		</table>
+		
+	</div>
+	<input class="btn btn-outline-dark" type="submit" value="Guardar">
+
+	
+		
+	</form>
+</body>
+
+
+
+</html>
